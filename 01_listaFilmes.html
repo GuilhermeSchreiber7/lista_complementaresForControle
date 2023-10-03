@@ -9,12 +9,45 @@
     */
 
     //ENTRADA
-
-    
+     let Nfilmes = Number(prompt(`quantidade de filmes desejada`))
+     let comedy = [];
+     let drama = [];
+     let romance = [];
     //PROCESSAMENTO
-    
-    
+     for (let i = 1; i <= Nfilmes; i++) {
+        let NameFilm = prompt(`Nome do filme`)
+        let GenFilm = prompt(`Gênero do filme (Comédia / Drama / Romance)`).toLowerCase().trim()
+        
+        if(GenFilm == "drama")
+        drama.push(NameFilm)
+
+        else if(GenFilm == "comédia" || GenFilm == "comedia")
+        comedy.push(NameFilm)
+
+        else if(GenFilm == "romance")
+        romance.push(NameFilm)
+     }
+      
     //SAÍDA
-    
+    if (comedy.includes(comedy[0]) && drama.includes(drama[0]) && romance.includes(romance[0]) ) 
+            alert(`Comédia: ${comedy.join(", ")}, Romance: ${romance.join(", ")}, Drama: ${drama.join(", ")}.`)
+
+        else if (comedy.includes(comedy[0]) && drama.includes(drama[0])) 
+            alert(`Comédia: ${comedy.join(", ")}, Drama: ${drama.join(", ")}.`)
+
+        else if (comedy.includes(comedy[0]) && romance.includes(romance[0])) 
+            alert(`Comédia: ${comedy.join(", ")}, Romance: ${romance.join(", ")}.`)
+
+        else if (drama.includes(drama[0]) && romance.includes(romance[0])) 
+            alert(`Drama: ${drama.join(", ")}, Romance: ${romance.join(", ")}.`)
+            
+        else if(drama.includes(drama[0]))
+        alert(`Drama: ${drama.join(", ")}`)
+
+        else if(romance.includes(romance[0]))
+        alert(`Romance: ${romance.join(", ")}`) 
+
+        else if(comedy.includes(comedy[0]))
+        alert(`Comédia: ${comedy.join(", ")}`)
     
 </script>
