@@ -8,12 +8,16 @@
     */
 
     //ENTRADA
-
-    
+    let fibonacci = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+    let nDesejado = Number(prompt(`quntos números você quer adcionar a seqûencia de fibonacci? (${fibonacci.join(", ")})`))
+    let NumbAdcionado = 0
     //PROCESSAMENTO
-    
+    for (let i = 1; i <= nDesejado; i++) {
+       NumbAdcionado = fibonacci[fibonacci.length - 1] + fibonacci[fibonacci.length - 2]
+       fibonacci.push(NumbAdcionado)
+    }
     
     //SAÍDA
-    
+    alert(`A lista final é: ${fibonacci.join(", ")}`)
 
 </script>

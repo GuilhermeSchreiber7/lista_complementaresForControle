@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     //PROBLEMA
     /*
@@ -7,10 +8,14 @@
     */
 
     //ENTRADA
-
-    
+    var NumbInteiro = Number(prompt(`informe um número inteiro positivo`).trim())
     //PROCESSAMENTO
-    
+    if(Number.isInteger(NumbInteiro) && NumbInteiro >= 1) {
+      for (let i = NumbInteiro - 1; i >= 1; i--) {
+       NumbInteiro *= i
+      }
+        alert(`O fatorial é ${NumbInteiro}`)
+    }
     
     //SAÍDA
     
